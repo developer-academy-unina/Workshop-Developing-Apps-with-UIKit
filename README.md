@@ -88,7 +88,7 @@ By exploring the project, you can learn how to create a simple storyboard App.
 
 ### How to
 
-1. Explore the `Mentors Appp` project files
+1. Explore the `Mentors App` project files
 
 2. Run the app(⌘+R) and test it
 
