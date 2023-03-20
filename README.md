@@ -70,7 +70,7 @@ By exploring the project, you can learn how to create a simple storyboard App.
 
 |                               Mentors App                               |                                  Xcode                                          |
 | :-------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-| <img src="docs/images/MentorsApp.jpeg" title="Mentors App" width="100%"> | <img src="docs/images/Xcode.png" title="Xcode" width="100%"> |
+| <img src="docs/images/MentorsApp.png" title="Mentors App" width="100%"> | <img src="docs/images/Xcode.png" title="Xcode" width="100%"> |
 
 <br />
 
