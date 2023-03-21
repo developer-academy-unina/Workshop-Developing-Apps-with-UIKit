@@ -58,7 +58,7 @@ The project's goal is to showcase basic UIKit elements and concepts:
 
 - Segues
 
-- @IBOutlets
+- @IBOutlets and @IBActions
 
 - AutoLayout
 

@@ -9,6 +9,12 @@ import Foundation
 
 var mentors: [Mentor] = [
     Mentor(
+        name: "Giovanni",
+        surname: "Monaco",
+        description: "🌈" ,
+        favouriteColor: .purple
+    ),
+    Mentor(
         name: "Stefano",
         surname: "Perna",
         description: "🧡",
@@ -25,12 +31,6 @@ var mentors: [Mentor] = [
         surname: "Rossi",
         description: "👩‍🎨" ,
         favouriteColor: .green
-    ),
-    Mentor(
-        name: "Giovanni",
-        surname: "Monaco",
-        description: "🌈" ,
-        favouriteColor: .purple
     ),
     Mentor(
         name: "Roberta",

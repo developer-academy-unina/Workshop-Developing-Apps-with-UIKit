@@ -29,6 +29,10 @@ class MentorDetailViewController: UIViewController, UITextFieldDelegate  {
     // Called when the view has been added to a view hierarchy.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Observers for Keyboard events.
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         // Setup after loading the view.
         if let mentor = mentor {
@@ -62,6 +66,32 @@ class MentorDetailViewController: UIViewController, UITextFieldDelegate  {
     //Called when the user click on the view (outside the UITextField). Hides the keyboard.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    
+    /*
+    //Called when editing on textField ends.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        updateSaveButtonState()
+    }
+     */
+    
+    // Call updateSaveButtonState everytime text change in TextFields
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
     
     // MARK: - Navigation
